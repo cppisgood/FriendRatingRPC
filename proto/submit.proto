@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message SubmitData {
+    string handle = 1;
+    string profile_url = 2;
+    int32 accept_count = 3;
+    int32 submit_count = 4;
+    map<int32,  int32> distribution = 5;
+}
+
+message SubmitDataRequest {
+    string platform = 1;
+    string handle = 2;
+}
+
+service SubmitDataService {
+    rpc GetSubmitData (SubmitDataRequest) returns (SubmitData);
+}

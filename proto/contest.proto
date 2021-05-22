@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message ContestData {
+    string handle = 1;
+    string profile_url = 2;
+    message Contest {
+        string name = 1;
+        string url = 2;
+        int32 timestamp = 3; // seconds
+        int32 rating = 4;
+    }
+    repeated Contest contests = 3;
+}
+
+message ContestDataRequest {
+    string platform = 1;
+    string handle = 2;
+}
+
+service ContestDataService {
+    rpc GetContestData (ContestDataRequest) returns (ContestData);
+}
