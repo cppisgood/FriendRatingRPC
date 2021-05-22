@@ -10,6 +10,12 @@ load("@rules_proto_grpc//python:repositories.bzl", rules_proto_grpc_python_repos
 
 rules_proto_grpc_python_repos()
 
+git_repository(
+    name = "rules_proto_grpc",
+    remote = "https://github.com/grpc/grpc.git",
+    tag = "v1.38.0",
+)
+
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 
 grpc_deps()
