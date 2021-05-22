@@ -1,4 +1,4 @@
-load("@rules_proto_grpc//python:defs.bzl", "python_proto_library")
+load("@rules_proto_grpc//python:defs.bzl", "python_proto_library", "python_grpc_library")
 
 python_proto_library(
     name = "friend_rating_proto_lib",
