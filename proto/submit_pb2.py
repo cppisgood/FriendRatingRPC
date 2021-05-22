@@ -19,29 +19,29 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0csubmit.proto\"\xc7\x01\n\nSubmitData\x12\x0e\n\x06handle\x18\x01 \x01(\t\x12\x13\n\x0bprofile_url\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65pt_count\x18\x03 \x01(\x05\x12\x14\n\x0csubmit_count\x18\x04 \x01(\x05\x12\x33\n\x0c\x64istribution\x18\x05 \x03(\x0b\x32\x1d.SubmitData.DistributionEntry\x1a\x33\n\x11\x44istributionEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05:\x02\x38\x01\"5\n\x11SubmitDataRequest\x12\x10\n\x08platform\x18\x01 \x01(\t\x12\x0e\n\x06handle\x18\x02 \x01(\t2E\n\x11SubmitDataService\x12\x30\n\rGetSubmitData\x12\x12.SubmitDataRequest\x1a\x0b.SubmitDatab\x06proto3'
+  serialized_pb=b'\n\x0csubmit.proto\"\xf4\x01\n\nSubmitData\x12\x0e\n\x06handle\x18\x01 \x01(\t\x12\x13\n\x0bprofile_url\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65pt_count\x18\x03 \x01(\x05\x12\x14\n\x0csubmit_count\x18\x04 \x01(\x05\x12\x1e\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x10.SubmitData.Data\x1au\n\x04\x44\x61ta\x12\x38\n\x0c\x64istribution\x18\x01 \x03(\x0b\x32\".SubmitData.Data.DistributionEntry\x1a\x33\n\x11\x44istributionEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05:\x02\x38\x01\"5\n\x11SubmitDataRequest\x12\x10\n\x08platform\x18\x01 \x01(\t\x12\x0e\n\x06handle\x18\x02 \x01(\t2E\n\x11SubmitDataService\x12\x30\n\rGetSubmitData\x12\x12.SubmitDataRequest\x1a\x0b.SubmitDatab\x06proto3'
 )
 
 
 
 
-_SUBMITDATA_DISTRIBUTIONENTRY = _descriptor.Descriptor(
+_SUBMITDATA_DATA_DISTRIBUTIONENTRY = _descriptor.Descriptor(
   name='DistributionEntry',
-  full_name='SubmitData.DistributionEntry',
+  full_name='SubmitData.Data.DistributionEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='SubmitData.DistributionEntry.key', index=0,
+      name='key', full_name='SubmitData.Data.DistributionEntry.key', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='SubmitData.DistributionEntry.value', index=1,
+      name='value', full_name='SubmitData.Data.DistributionEntry.value', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -59,8 +59,39 @@ _SUBMITDATA_DISTRIBUTIONENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=165,
-  serialized_end=216,
+  serialized_start=210,
+  serialized_end=261,
+)
+
+_SUBMITDATA_DATA = _descriptor.Descriptor(
+  name='Data',
+  full_name='SubmitData.Data',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='distribution', full_name='SubmitData.Data.distribution', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_SUBMITDATA_DATA_DISTRIBUTIONENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=144,
+  serialized_end=261,
 )
 
 _SUBMITDATA = _descriptor.Descriptor(
@@ -100,16 +131,16 @@ _SUBMITDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='distribution', full_name='SubmitData.distribution', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='data', full_name='SubmitData.data', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
-  nested_types=[_SUBMITDATA_DISTRIBUTIONENTRY, ],
+  nested_types=[_SUBMITDATA_DATA, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -119,7 +150,7 @@ _SUBMITDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=17,
-  serialized_end=216,
+  serialized_end=261,
 )
 
 
@@ -157,22 +188,31 @@ _SUBMITDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=218,
-  serialized_end=271,
+  serialized_start=263,
+  serialized_end=316,
 )
 
-_SUBMITDATA_DISTRIBUTIONENTRY.containing_type = _SUBMITDATA
-_SUBMITDATA.fields_by_name['distribution'].message_type = _SUBMITDATA_DISTRIBUTIONENTRY
+_SUBMITDATA_DATA_DISTRIBUTIONENTRY.containing_type = _SUBMITDATA_DATA
+_SUBMITDATA_DATA.fields_by_name['distribution'].message_type = _SUBMITDATA_DATA_DISTRIBUTIONENTRY
+_SUBMITDATA_DATA.containing_type = _SUBMITDATA
+_SUBMITDATA.fields_by_name['data'].message_type = _SUBMITDATA_DATA
 DESCRIPTOR.message_types_by_name['SubmitData'] = _SUBMITDATA
 DESCRIPTOR.message_types_by_name['SubmitDataRequest'] = _SUBMITDATAREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SubmitData = _reflection.GeneratedProtocolMessageType('SubmitData', (_message.Message,), {
 
-  'DistributionEntry' : _reflection.GeneratedProtocolMessageType('DistributionEntry', (_message.Message,), {
-    'DESCRIPTOR' : _SUBMITDATA_DISTRIBUTIONENTRY,
+  'Data' : _reflection.GeneratedProtocolMessageType('Data', (_message.Message,), {
+
+    'DistributionEntry' : _reflection.GeneratedProtocolMessageType('DistributionEntry', (_message.Message,), {
+      'DESCRIPTOR' : _SUBMITDATA_DATA_DISTRIBUTIONENTRY,
+      '__module__' : 'submit_pb2'
+      # @@protoc_insertion_point(class_scope:SubmitData.Data.DistributionEntry)
+      })
+    ,
+    'DESCRIPTOR' : _SUBMITDATA_DATA,
     '__module__' : 'submit_pb2'
-    # @@protoc_insertion_point(class_scope:SubmitData.DistributionEntry)
+    # @@protoc_insertion_point(class_scope:SubmitData.Data)
     })
   ,
   'DESCRIPTOR' : _SUBMITDATA,
@@ -180,7 +220,8 @@ SubmitData = _reflection.GeneratedProtocolMessageType('SubmitData', (_message.Me
   # @@protoc_insertion_point(class_scope:SubmitData)
   })
 _sym_db.RegisterMessage(SubmitData)
-_sym_db.RegisterMessage(SubmitData.DistributionEntry)
+_sym_db.RegisterMessage(SubmitData.Data)
+_sym_db.RegisterMessage(SubmitData.Data.DistributionEntry)
 
 SubmitDataRequest = _reflection.GeneratedProtocolMessageType('SubmitDataRequest', (_message.Message,), {
   'DESCRIPTOR' : _SUBMITDATAREQUEST,
@@ -190,7 +231,7 @@ SubmitDataRequest = _reflection.GeneratedProtocolMessageType('SubmitDataRequest'
 _sym_db.RegisterMessage(SubmitDataRequest)
 
 
-_SUBMITDATA_DISTRIBUTIONENTRY._options = None
+_SUBMITDATA_DATA_DISTRIBUTIONENTRY._options = None
 
 _SUBMITDATASERVICE = _descriptor.ServiceDescriptor(
   name='SubmitDataService',
@@ -199,8 +240,8 @@ _SUBMITDATASERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=273,
-  serialized_end=342,
+  serialized_start=318,
+  serialized_end=387,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetSubmitData',

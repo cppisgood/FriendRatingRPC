@@ -11,13 +11,5 @@ class Submit(submit_pb2_grpc.SubmitDataServiceServicer):
             profile_url = data['profile_url'],
             accept_count = data['accept_count'],
             submit_count = data['submit_count'],
-            distribution = data['distribution']
+            data = data['data']
         )
-
-
-# def Contestserve():
-#     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-#     submit_pb2_grpc.add_SubmitDataServiceServicer_to_server(Contest(), server)
-#     server.add_insecure_port('[::]:50051')
-#     server.start()
-#     server.wait_for_termination()

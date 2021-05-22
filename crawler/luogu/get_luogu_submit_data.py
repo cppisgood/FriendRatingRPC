@@ -44,7 +44,9 @@ def get_luogu_submit_data(handle: str) -> dict:
             "accept_count": accept_count,
             "submit_count": submit_count,
             "profile_url": f"https://www.luogu.com.cn/user/{user_id}",
-            "distribution": distribution,
+            "data": {
+                "distribution": distribution,
+            },
         }
     except Exception as e:
         logging.exception(e)

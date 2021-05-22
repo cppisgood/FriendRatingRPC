@@ -38,7 +38,9 @@ def get_codeforces_submit_data(handle: str) -> dict:
             "accept_count": accept_count,
             "submit_count": submit_count,
             "profile_url": f"https://codeforces.com/profile/{handle}",
-            "distribution": distribution,
+            "data": {
+                "distribution": distribution,
+            }
         }
     except Exception as e:
         logging.exception(e)

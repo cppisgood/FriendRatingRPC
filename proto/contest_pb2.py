@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rcontest.proto\"\xa3\x01\n\x0b\x43ontestData\x12\x0e\n\x06handle\x18\x01 \x01(\t\x12\x13\n\x0bprofile_url\x18\x02 \x01(\t\x12&\n\x08\x63ontests\x18\x03 \x03(\x0b\x32\x14.ContestData.Contest\x1aG\n\x07\x43ontest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x05\x12\x0e\n\x06rating\x18\x04 \x01(\x05\"6\n\x12\x43ontestDataRequest\x12\x10\n\x08platform\x18\x01 \x01(\t\x12\x0e\n\x06handle\x18\x02 \x01(\t2I\n\x12\x43ontestDataService\x12\x33\n\x0eGetContestData\x12\x13.ContestDataRequest\x1a\x0c.ContestDatab\x06proto3'
+  serialized_pb=b'\n\rcontest.proto\"\xbf\x01\n\x0b\x43ontestData\x12\x0e\n\x06handle\x18\x01 \x01(\t\x12\x13\n\x0bprofile_url\x18\x02 \x01(\t\x12\x0e\n\x06rating\x18\x03 \x01(\x05\x12\x0e\n\x06length\x18\x04 \x01(\x05\x12\"\n\x04\x64\x61ta\x18\x05 \x03(\x0b\x32\x14.ContestData.Contest\x1aG\n\x07\x43ontest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x05\x12\x0e\n\x06rating\x18\x04 \x01(\x05\"6\n\x12\x43ontestDataRequest\x12\x10\n\x08platform\x18\x01 \x01(\t\x12\x0e\n\x06handle\x18\x02 \x01(\t2I\n\x12\x43ontestDataService\x12\x33\n\x0eGetContestData\x12\x13.ContestDataRequest\x1a\x0c.ContestDatab\x06proto3'
 )
 
 
@@ -73,8 +73,8 @@ _CONTESTDATA_CONTEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=181,
+  serialized_start=138,
+  serialized_end=209,
 )
 
 _CONTESTDATA = _descriptor.Descriptor(
@@ -100,8 +100,22 @@ _CONTESTDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='contests', full_name='ContestData.contests', index=2,
-      number=3, type=11, cpp_type=10, label=3,
+      name='rating', full_name='ContestData.rating', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='length', full_name='ContestData.length', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='ContestData.data', index=4,
+      number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -119,7 +133,7 @@ _CONTESTDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=18,
-  serialized_end=181,
+  serialized_end=209,
 )
 
 
@@ -157,12 +171,12 @@ _CONTESTDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=237,
+  serialized_start=211,
+  serialized_end=265,
 )
 
 _CONTESTDATA_CONTEST.containing_type = _CONTESTDATA
-_CONTESTDATA.fields_by_name['contests'].message_type = _CONTESTDATA_CONTEST
+_CONTESTDATA.fields_by_name['data'].message_type = _CONTESTDATA_CONTEST
 DESCRIPTOR.message_types_by_name['ContestData'] = _CONTESTDATA
 DESCRIPTOR.message_types_by_name['ContestDataRequest'] = _CONTESTDATAREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -198,8 +212,8 @@ _CONTESTDATASERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=239,
-  serialized_end=312,
+  serialized_start=267,
+  serialized_end=340,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetContestData',

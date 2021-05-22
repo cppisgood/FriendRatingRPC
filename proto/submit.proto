@@ -5,7 +5,10 @@ message SubmitData {
     string profile_url = 2;
     int32 accept_count = 3;
     int32 submit_count = 4;
-    map<int32,  int32> distribution = 5;
+    message Data {
+        map<int32,  int32> distribution = 1;
+    }
+    Data data = 5;
 }
 
 message SubmitDataRequest {
